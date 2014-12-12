@@ -20,11 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
+```ruby
 require 'camelizable'
 
 class String
   include Camelizable
 end
+```
 
 ## Contributing
 
