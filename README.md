@@ -26,6 +26,18 @@ require 'camelizable'
 class String
   include Camelizable
 end
+
+p "foo_bar_baz".lcc            #=> "fooBarBaz"
+p "foo bar baz".lcc            #=> "fooBarBaz"
+p "foo/bar_baz".lcc            #=> "fooBarBaz"
+
+p "foo_bar_baz".ucc            #=> "FooBarBaz"
+p "foo bar_baz".ucc            #=> "FooBarBaz"
+p "foo/bar_baz".ucc            #=> "FooBarBaz"
+
+p "foo_bar.baz".lcc(/_/)       #=> "fooBar.baz"
+p "foo_bar_baz".lcc(/_bar_/)   #=> "fooBaz"
+p "foo_bar_baz".lcc(/[ar]/)    #=> "foo_b_bZ"
 ```
 
 ## Contributing
