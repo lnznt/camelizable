@@ -9,3 +9,7 @@ module Camelizable
     ucc(sep).sub(/./){ $&.downcase }
   end
 end
+
+class String
+  include Camelizable
+end

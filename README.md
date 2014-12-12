@@ -23,10 +23,6 @@ Or install it yourself as:
 ```ruby
 require 'camelizable'
 
-class String
-  include Camelizable
-end
-
 p "foo_bar_baz".lcc            #=> "fooBarBaz"
 p "foo bar baz".lcc            #=> "fooBarBaz"
 p "foo/bar_baz".lcc            #=> "fooBarBaz"
